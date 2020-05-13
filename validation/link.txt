@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-https://github.com/ivankhoda/yandex_practikum_10/blob/gh-pages/validation/index.html
-=======
-https://github.com/ivankhoda/yandex_practikum_10/blob/master/validation/index.html
->>>>>>> master
