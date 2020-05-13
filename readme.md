@@ -2,4 +2,4 @@
 
 Версия 0.0.1
 
-Ссылка на проеткную работу https://github.com/ivankhoda/yandex_practikum_10/blob/master/validation/index.html
+Ссылка на проеткную работу https://github.com/ivankhoda/yandex_practikum_10/blob/master/index.html
