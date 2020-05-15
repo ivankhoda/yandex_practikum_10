@@ -2,7 +2,7 @@
 
 Версия 0.0.1
 
-Ссылка на проектную работу https://github.com/ivankhoda/yandex_practikum_10/blob/master/index.html
+Ссылка на проектную работу https://ivankhoda.github.io/yandex_practikum_10/
 
 По заданию надо сделать регулярные выражения:
 ```
