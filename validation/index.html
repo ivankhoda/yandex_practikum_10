@@ -32,14 +32,15 @@
                     </div>
                     <div class="form__field">
                         <input class="form__input" type="text" name="tel" placeholder="Телефон"
-                               pattern="^(\+7)?(\()?(\s)?([\d\)])+(\s)?[\d\-]{1,10}$" minlength="1" maxlength="17"
+                               pattern="^(?<plus7>(8|\+7))?(?<numberPrefix>([\d]{3}))?(?<number>([0-9]){7})$|(\+7\s)([\d\.-]{13})|(\+7\()(\d{3}\))([\d\.-]{9})|(\+7\()(\d{3}\)\s)([\d\.-]{9})$" minlength="1" maxlength="17"
                                required/>
                         <span class="form__error">Недопустимый формат номера</span>
                     </div>
                     <div class="form__field">
                         <input class="form__input" type="text" name="url"
-                               pattern="^(?<schema>https?:\/\/)?(?<localhost>([a-z0-9]+:))?(?<ip>(([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d)\.){3}([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d){2})?(?<website>([a-z0-9]+\.[a-z]+))?(?<domain2>\.[a-z]{2,3})?(?<port>(:[0-9]{1,5})+)?(?<www>www?\.)?|(?<host>[a-z0-9])?(?<domain>\.[a-z]{2,3})?(?<uri>(?<segment>(\/)[a-z_0-9\.-]{1,})+)(?<last_slash>\/)?(?<last_hash>#)?$" placeholder="Ваш сайт" required/>
+                               pattern="^(?<schema>https?:\/)(?<www>www?\.)?(?<website>([a-z0-9])+)?(?<domain2>\.[a-z]{2,3})?(?<ip>(([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d)\.){3}([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d){2})?(?<port>(:[0-9]{1,5})+)?(?<uri>(?<segment>(\/)[a-z_0-9\.-]{1,})+)(?<port2>(:[0-9]{1,5})+)?((?<segment3>(\/)[a-z_0-9\.-]+){1,})?(?<last_slash>\/)?(?<last_hash>#)?|(?<ip1>(([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d)\.){3}([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d){2})(?<port3>(:[0-9]{1,5}))(?<uri2>(?<segment2>(\/)[a-z_0-9\.-]{1,}))?(?<last_slash2>\/)?(?<last_hash2>#)?|(?<ip3>(([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d)\.){3}([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d){2})$" placeholder="Ваш сайт" required/>
                         <span class="form__error">URL в формате: http://mysite.ru</span>
+                        <!---https://regex101.com/r/JwzaUd/18--->
                     </div>
                     <button class="form__button" type="text">Отправить</button>
                 </fieldset>
