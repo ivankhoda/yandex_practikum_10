@@ -32,7 +32,7 @@
                     </div>
                     <div class="form__field">
                         <input class="form__input" type="text" name="tel" placeholder="Телефон"
-                               pattern="^(?<plus7>(8|\+7))?(?<numberPrefix>([\d]{3}))?(?<number>([0-9]){7})$|(\+7\s)([\d\.-]{13})|(\+7\()(\d{3}\))([\d\.-]{9})|(\+7\()(\d{3}\)\s)([\d\.-]{9})$" minlength="1" maxlength="17"
+                               pattern="^(?<plus7>(\+7))(?<numberPrefix>([\(]{1}))(?<num>([\d]{3}))(\){1})(\s{1})([\d]{3})([\.-])([\d]{2})([\.-])([\d]{2})$|^(?<plus>(\+7))(?<numberPrefix1>([\(]{1}))(?<num1>([\d]{3}))(\){1})([\d]{3})([\.-])([\d]{2})([\.-])([\d]{2})$|^(?<plus1>(\+7))(?<numberPrefix2>([\s]{1}))(?<num2>([\d]{3}))([\.-]{1})([\d]{3})([\.-])([\d]{2})([\.-])([\d]{2})$|^(?<plus78>(\+7|8))(?<numberPrefix3>([\d]{3}))([\d]{3})(\d{2})(\d{2})$" minlength="1" maxlength="17"
                                required/>
                         <!---https://regex101.com/r/JwzaUd/22--->
                         <span class="form__error">Недопустимый формат номера</span>
