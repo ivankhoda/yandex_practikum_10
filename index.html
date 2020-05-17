@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Regular Expressions</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <img class="header__logo" src="https://pictures.s3.yandex.net/frontend-developer/dom_bom/logo.svg" alt="logo">
+        <p class="header__logo-sub">Регулярные выражения</p>
+    </header>
+    <main class="container">
+        <div class="cover">
+            <div class="cover__image"></div>
+            <h1 class="cover__heading">RegExp</h1>
+        </div>
+        <div class="block">
+            <form class="form" name="register" action="http://httpbin.org/post" method="POST">
+                <h3>Форма регистрации</h3>
+                <fieldset class="form__fieldset">
+                    <div class="form__field">
+                        <input class="form__input" type="text" name="name" pattern="^[А-ЯЁ][а-яё]*(-[А-ЯЁ][а-яё]*)?$"
+                               placeholder="Имя" minlength="2" maxlength="20" required />
+                        <span class="form__error">Только кириллица, первая буква заглавная, можно ввести от 2 до 20
+                            символов </span>
+                    </div>
+                    <div class="form__field">
+                        <input class="form__input" type="text" name="email" pattern="([\w+\.\-]+)(@)([\w\.]+)" placeholder="E-Mail"
+                               required />
+                        <span class="form__error">e-mail в формате: students-yandex@yandex.ru</span>
+                    </div>
+                    <div class="form__field">
+                        <input class="form__input" type="text" name="tel" placeholder="Телефон"
+
+                               pattern="^(?<plus7>(\+7))(?<numberPrefix>([\(]{1}))(?<num>([\d]{3}))(\){1})(\s{1})([\d]{3})([\.-])([\d]{2})([\.-])([\d]{2})$|^(?<plus>(\+7))(?<numberPrefix1>([\(]{1}))(?<num1>([\d]{3}))(\){1})([\d]{3})([\.-])([\d]{2})([\.-])([\d]{2})$|^(?<plus1>(\+7))(?<numberPrefix2>([\s]{1}))(?<num2>([\d]{3}))([\.-]{1})([\d]{3})([\.-])([\d]{2})([\.-])([\d]{2})$|^(?<plus78>(\+7|8))(?<numberPrefix3>([\d]{3}))([\d]{3})(\d{2})(\d{2})$" minlength="1" maxlength="17"
+                               required/>
+                        <!---https://regex101.com/r/JwzaUd/22--->
+
+                               pattern="^(\+7)?(\()?(\s)?([\d\)])+(\s)?[\d\-]{1,10}$" minlength="1" maxlength="17"
+                               required/>
+
+                        <span class="form__error">Недопустимый формат номера</span>
+                    </div>
+                    <div class="form__field">
+                        <input class="form__input" type="text" name="url"
+
+                               pattern="^(?<schema>https?:\/{2})(?<www>www?\.)(?<website>([a-z0-9])+)(?<domain1>\.[a-z]{2,3})$|^(?<schema1>https?:\/{2})(?<website2>([a-z0-9])+)(?<domain2>\.[a-z]{2,3})(?<port2>(:[0-9]{1,5})+)?((?<segment2>(\/)[a-z_0-9\.-]+){1,})?(?<last_slash>\/)?(?<last_hash>#)?$|^(?<schema3>https?:\/{2})(?<website3>([a-z0-9\.-])+)(?<domain3>\.[a-z]{2,3})$|^(?<schema4>https?:\/{2})(?<ip4>(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5])))(?<port4>(:[0-9]{1,5})+)?((?<segment4>(\/)[a-z_0-9\.-]+){1,})?(?<last_slash4>\/)?(?<last_hash4>#)?$" placeholder="Ваш сайт" required/>
+                        <span class="form__error">URL в формате: http://mysite.ru</span>
+                        <!---https://regex101.com/r/JwzaUd/23--->
+
+                               pattern="^(?<schema>https?:\/\/)?(?<localhost>([a-z0-9]+:))?(?<ip>(([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d)\.){3}([1-9]?\d|1\d\d|2[0-5][0-5]|2[0-4]\d){2})?(?<website>([a-z0-9]+\.[a-z]+))?(?<domain2>\.[a-z]{2,3})?(?<port>(:[0-9]{1,5})+)?(?<www>www?\.)?|(?<host>[a-z0-9])?(?<domain>\.[a-z]{2,3})?(?<uri>(?<segment>(\/)[a-z_0-9\.-]{1,})+)(?<last_slash>\/)?(?<last_hash>#)?$" placeholder="Ваш сайт" required/>
+                        <span class="form__error">URL в формате: http://mysite.ru</span>
+
+                    </div>
+                    <button class="form__button" type="text">Отправить</button>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
